@@ -1,19 +1,36 @@
-<!doctype html>
-<html>
-<head>
-	<link rel="stylesheet" href="ShuttleBusSiteCSS.css">
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <meta charset="utf-8">
-        <title>College of Dupage Shuttle Bus Route</title>
-</head>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-GyIJJNPLRMoWACap5boZdeCJH2FQ4NY&callback=myMap"></script>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="ShuttleBusSiteCSS.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+            <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+                <meta charset="utf-8">
+            <title>College of Dupage Shuttle Bus Route</title>
+        </head>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-GyIJJNPLRMoWACap5boZdeCJH2FQ4NY&callback=myMap"></script>
+        
+        <script src="ShuttleBusSiteJS.js"></script>
+     
+        <body>
 
-<script src="ShuttleBusSiteJS.js"></script>
- 
-<body>
-	<div id="floating-panel">
-		<input type="button" value="Toggle School Map" onclick="overlay.toggle();"></input>
-	</div>
-    	<div id="map"></div>
-</body>
-</html>
+            <!--Navigation Bar-->
+            <div class="navbar" id="myNavbar">
+                <span onclick="openNav()"><a href="#menu">&#9776;</a></span>
+ 				<a href="http://cod.edu">College of DuPage</a>
+            </div>
+        
+            <!--Side Menu-->
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"></a>
+                <a href="#">About</a>
+                <a href="#">Contact Us</a>
+            
+            </div>
+        
+       
+        <button class="button" onclick="overlay.toggle();">
+        Toggle School Map</button>
+            <div id="map"></div>
+        </body>
+    </html>
