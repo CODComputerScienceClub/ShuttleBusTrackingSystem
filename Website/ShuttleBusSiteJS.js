@@ -1,3 +1,14 @@
+//For opening the sidebar
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.body.style.backgroundColor = "white";
+}
+	
 	var overlay;
 	COD.prototype = new google.maps.OverlayView();
 
@@ -5,14 +16,14 @@
         function initMap() 
 	 {
 		 // Coordinates for Bus Stops
-	        var stop1 = {lat: 41.841454, lng: -88.073906};   
-		var stop2 = {lat: 41.839027, lng: -88.077883};
+	        var stop1 = {lat: 41.841271, lng: -88.073999};  //A  41.841454 -88.073906
+		var stop2 = {lat: 41.839027, lng: -88.077883}; //B
 	    
                 var map = new google.maps.Map(document.getElementById('map'), 
 		{
           		zoom: 16,
 		        // Map centered at these coordiantes
-                       center: {lat: 41.841190, lng: -88.072572},
+                       center: {lat: 41.841256, lng: -88.074053},
         	});
 
 		 var bounds = new google.maps.LatLngBounds(
@@ -154,4 +165,3 @@
 	};
 
       google.maps.event.addDomListener(window, 'load', initMap);
-	  
