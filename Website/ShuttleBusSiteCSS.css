@@ -1,7 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 #map {
-	height: 100%;
+	position: relative;
+	height: 400px;
+	width:100%;
+	z-index: 0;
+	left: 0;
 }
 
 html, body {
@@ -9,17 +13,98 @@ html, body {
         margin: 0;
         padding: 0;
       }
+	  
+body {
+	font-family: "Raleway", san-serif;
+	background-color: #ededed;
+}
 
-#floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 40%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
+.navbar {
+	background-color: #0C511C;
+	z-index: 3;
+	overflow: hidden;
+	box-shadow: 0 12px 16px 0 
+	rgba(0,0,0,0.24),0 17px 50px 0
+	rgba(0,0,0,0.19);
+}
+
+.navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.navbar a:hover {
+	background-color: #6af7e2;
+	color: #6d706f;
+}
+
+.navbar a.active {
+	background-color: #97a8ed;
+	color: white;
+}
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color: green;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+}
+
+/*May need color adjustment*/
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #36e2c9;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus {
+	background-color: #6af7e2;
+	color: #6d706f;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.button {
+    background-color: #0C511C; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+	position: absolute;
+	bottom: 8px;
+	right: 8px;
+	z-index: 2;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* For Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+	box-shadow: 0 12px 16px 0 
+	rgba(0,0,0,0.24),0 17px 50px 0
+	rgba(0,0,0,0.19);
 }
